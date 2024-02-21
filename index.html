@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SacredDreams</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>  
+    <script src="searches.js"></script> 
+    <script src="countries.js"></script>
+    <script src="rainbow.js"></script>
+    <script src="family.js"></script> 
+    <script src="aboutadorerscenacle.js"></script>
+    <script src="marriageandthedevil.js"></script>
+    <script src="visionsofadorerscenacle.js"></script>
+    <div id="title-bar">
+        <h1></h1>
+        <img id="logo" src="holycross.png" alt="Logo">
+    </div>
+  
+  </head>
+  <body>
+       
+  <div id="background">
+    <div class="rainbow"></div>
+  </div>
+  <div id="content">
+    <p></p>
+  </div>
+  <div id="movingText">GLORY TO GOD ON HIGH</div>
+
+
+
+    <div id="header">
+      <marquee behavior="scroll" direction="left">Sacred-Visions!     Acts 2:17 NKJV ‘And it shall come to pass in the last days, says God, That I will pour out of My Spirit on all flesh; Your sons and your daughters shall prophesy, Your young men shall see visions, Your old men shall dream dreams.' </marquee>
+    </div>
+
+    <div id="button-bar">
+  <button onclick="resetPage()">Home</button>
+  <button onclick="toggleContactForm()">Contact us</button>
+  <!-- Sacred Dreams button with dropdown menu -->
+  
+  <div class="dropdown">
+    <button class="dropdown-button">Sacred Dreams Of AdorersCenacle 
+        <div class="dropdown-content">
+        <a href="#" onclick="dream1998()">August 1998</a>
+        <a href="#" onclick="dreamJuly2000()">July 9, 2000</a>
+        <a href="#" onclick="dreamDecember2000()">December 11, 2000</a>
+        <a href="#" onclick="dreamNovember2010()">November 9, 2010</a>
+        <a href="#" onclick="dreamMay2011()">May 14, 2011</a>
+        <a href="#" onclick="dreamJuly2019()">July 28, 2019</a>
+        <a href="#" onclick="dreamNovember2022()">November 2022</a>
+        <a href="#" onclick="dreamSacredSongs()">Sacred Songs</a>
+    </div>
+</button>
+</div>
+
+  <div class="dropdown">
+  <button class="dropdown-button">Shared Sacred Dreams 
+    <div class="dropdown-content">
+      <a href="#" onclick="shareSacredDream()">Share Your Sacred Dream</a>
+      <a href="#" onclick="biblicalDreams()">Biblical DreamsAndVisions</a>
+      <a href="#" onclick="viewSharedDreams()">View Shared Sacred Dreams</a>
+      <a href="#" onclick="commonMessages()">Identical Dreams/Visions</a>
+      <a href="#" onclick="dreamsByRegion()">Regional Sacred Dreams</a>
+      <a href="#" onclick="predictEvents()">Predictions From Sacred Dreams</a>
+    </div>
+  </button>
+</div>
+
+<!-- This is the search form element -->
+<form id="searchForm" style="display: none;">
+  <!-- You can add any additional form elements or styling here -->
+</form>
+
+<div class="dropdown">
+    <button class="dropdown-button">MyFamily 
+        <div class="dropdown-content">
+            <a href="#" onclick="createFamily()">Create a family</a>
+            <a href="#" onclick="marriageForm()">Marriage and the devil</a>
+            <a href="#" onclick="adorersCenacleForm()">About AdorersCenacle</a>
+        </div>
+    </button>
+</div>
+ </div>
+
+
+<div id="dreamContent" style="display: none; display: inline-block; text-align: center;">
+    <!-- This is where the dream content will be displayed -->
+</div>
+
+<!-- Beginning of contact us logic --------------- --> 
+<form id="contactForm" action="saveData.php" method="post">
+  <h1>Contact Us</h1>
+  <label for="fname">First Name</label>
+  <input type="text" id="fname" name="fname"><br>
+
+  <label for="lname">Last Name</label>
+  <input type="text" id="lname" name="lname"><br>
+
+  <label for="phone">Phone Number</label>
+  <input type="tel" id="phone" name="phone"><br>
+
+  <label for="email">Email</label>
+  <input type="email" id="email" name="email"><br>
+
+  <label for="message">Message</label>
+  <textarea id="message" name="message" rows="8" required></textarea>
+
+  <button type="submit">Submit</button>
+  <button type="reset" onclick="cancelForm()">Cancel</button>
+</form>
+
+
+    
+
+   <!-- beginning of shared sacred dreams logic -->
+<form id="share-dream-form">
+  <label for="country">Country/Continent:</label>
+  <select id="country" name="country">
+    <option value="Africa">Africa</option>
+    <option value="Asia">Asia</option>
+    <option value="Europe">Europe</option>
+    <option value="North America">North America</option>
+    <option value="South America">South America</option>
+  </select><br><br>
+  
+  <label for="first-name">First Name:</label>
+  <input type="text" id="first-name" name="first-name">
+  <label for="last-name">Last Name:</label>
+  <input type="text" id="last-name" name="last-name">
+  <label for="email">Email:</label>
+  <input type="email" id="email" name="email">
+  <label for="phone">Phone Number:</label>
+  <input type="tel" id="phone" name="phone">
+  <label for="dream-title">Dream Title:</label>
+  <input type="text" id="dream-title" name="dream-title">
+  <label for="dream-content">Dream Content:</label>
+  <textarea id="dream-content" name="dream-content"rows="8" required></textarea>
+  <button type="submit">Submit</button>
+  <button type="button" onclick="closeForm()">Close</button>
+</form>
+
+<div id="view-dreams-form" style="display: none;"></div>
+<div id="common-messages-form" style="display: none;"></div>
+<div id="dreams-by-region-form" style="display: none;"></div>
+<div id="predicted-events-form" style="display: none;"></div>
+
+    <div>
+        <img src="holysacrament.jpg" alt="Moving Image" width="500" height="600" class="moving-image">
+    </div>
+
+  </body>
+</html>
+
+
+
+
+          
+          
