@@ -15,11 +15,32 @@
   flex-wrap: wrap; /* Allow items to wrap onto multiple lines */
 }
 
-/* Add more styles for different screen sizes as needed */
-        @media screen and (max-width: 600px) {
-            /* Styles for small screens (e.g., mobile devices) */
-        }
- 
+    .container {
+      display: flex;
+      flex-wrap: wrap; /* Enable wrapping on small screens */
+    }
+
+    .item {
+      flex: 1 0 auto; /* Equal-sized items, adjust if needed */
+      margin: 10px;
+      padding: 20px;
+      border: 1px solid #ddd;
+      text-align: center;
+    }
+
+    /* Media queries for responsive adjustments */
+    @media (max-width: 768px) {
+      .item {
+        flex: 0 0 100%; /* Full-width items on small screens */
+      }
+    }
+
+    @media (min-width: 768px) {
+      .item {
+        flex: 1 0 300px; /* Adjust width for larger screens */
+      }
+    }
+  
 #title-bar {
     background-color: slategray; /* Set your preferred background color */
     color: greenyellow; /* Set your preferred text color */
